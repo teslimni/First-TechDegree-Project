@@ -77,9 +77,12 @@ $quotes = [
  * @return array Returns an associative array.
  */
 function getRandomQuote(array $quotes) {
+    // Get the total number of element in the array and minus 1 since arrays begins counting at 0. 
     $all_arr_el = count($quotes) - 1;
+    //generate a random number between 0 and the number of array from $all_arr_el to form an array key
     $randomKey = rand(0, $all_arr_el);
-    // $randomQuote = array_rand($quotes);
+    // $randomQuote = array_rand($quotes); this line could replace the two lines above
+    //use the random key to select an array element
     $el = $quotes[$randomKey];
     return $el;
 }
@@ -92,7 +95,9 @@ function getRandomQuote(array $quotes) {
  * @return string Returns a string of html text
  */
 function printQuote(array $quotes) {
+    // Call the getRandomQuote function and assign it to a variable
     $randomQuote = getRandomQuote($quotes);
+    // Create the html element and output the relevant contents with the $randomQuote
     $str = '';
     $str .= '<p class="quote">' . $randomQuote['quote'] . '</p>';
     $str .= '<p class="source">' . $randomQuote['source'];
@@ -116,9 +121,13 @@ function printQuote(array $quotes) {
  * @return string Returns a string of color name. 
  */
 function bg() {
+    // set up an array of pre-defined color names
     $bgColors = [
         'darkgreen', 'darkblue', 'skyblue', 'tomato', 'violet'
     ];
+    // Select a random key from the array index/key
     $randColors = array_rand($bgColors);
-    return $bgColors[$randColors];
+    //Use the generated random key to select a random background color from the pre-defined array of colors
+    $randBg = $bgColors[$randColors];
+    return $randBg;
 }
