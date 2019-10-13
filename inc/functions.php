@@ -104,8 +104,9 @@ function printQuote(array $quotes) {
         $str .= '<span class="tag">'. $randomQuote['tag'] . '</span>';
     }
     if (isset($randomQuote['date'])) {
-        $str .= '<span class="year">' . $randomQuote['date'] . '</span></p>';
+        $str .= '<span class="year">' . $randomQuote['date'] . '</span>';
     }
+    $str .= '</p>';
 
     return $str;
 }
