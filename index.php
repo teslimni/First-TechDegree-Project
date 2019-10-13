@@ -1,7 +1,6 @@
 <?php include 'inc/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="refresh" content="3" charset="UTF-8">
   <title>Random Quotes</title>
@@ -9,7 +8,6 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body class="<?php echo bg(); ?>">
   <div class="container">
     <div id="quote-box">
@@ -18,5 +16,4 @@
     <button id="loadQuote" onclick="window.location.reload(true)">Show another quote</button>
   </div>
 </body>
-
 </html>

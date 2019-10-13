@@ -65,7 +65,8 @@ body {
   font-style: normal;
 }
 
-.year:before {
+.year:before,
+.tag:before {
   content: ", ";
   font-style: normal;
 }
